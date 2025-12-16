@@ -1,6 +1,4 @@
 ﻿using Lavadero.Controladores;
-using System;
-using System.Windows.Forms;
 
 namespace Lavadero.Vistas
 {
@@ -15,50 +13,70 @@ namespace Lavadero.Vistas
 
         private void InitializeComponent()
         {
-            this.txtUsuario = new TextBox();
-            this.txtContrasena = new TextBox();
-            this.btnIngresar = new Button();
-            this.lblUsuario = new Label();
-            this.lblContrasena = new Label();
-
-            // FormLogin
-            this.Text = "Login - Lavadero";
-            this.Size = new System.Drawing.Size(350, 250);
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-
-            // lblUsuario
-            this.lblUsuario.Text = "Usuario:";
-            this.lblUsuario.Location = new System.Drawing.Point(50, 40);
-            this.lblUsuario.Size = new System.Drawing.Size(100, 20);
-
+            txtUsuario = new TextBox();
+            txtContrasena = new TextBox();
+            btnIngresar = new Button();
+            lblUsuario = new Label();
+            lblContrasena = new Label();
+            SuspendLayout();
+            // 
             // txtUsuario
-            this.txtUsuario.Location = new System.Drawing.Point(50, 65);
-            this.txtUsuario.Size = new System.Drawing.Size(240, 25);
-
-            // lblContrasena
-            this.lblContrasena.Text = "Contraseña:";
-            this.lblContrasena.Location = new System.Drawing.Point(50, 100);
-            this.lblContrasena.Size = new System.Drawing.Size(100, 20);
-
+            // 
+            txtUsuario.Location = new Point(50, 65);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(240, 27);
+            txtUsuario.TabIndex = 1;
+            // 
             // txtContrasena
-            this.txtContrasena.Location = new System.Drawing.Point(50, 125);
-            this.txtContrasena.Size = new System.Drawing.Size(240, 25);
-            this.txtContrasena.PasswordChar = '*';
-
+            // 
+            txtContrasena.Location = new Point(50, 125);
+            txtContrasena.Name = "txtContrasena";
+            txtContrasena.PasswordChar = '*';
+            txtContrasena.Size = new Size(240, 27);
+            txtContrasena.TabIndex = 3;
+            txtContrasena.TextChanged += txtContrasena_TextChanged;
+            // 
             // btnIngresar
-            this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.Location = new System.Drawing.Point(110, 165);
-            this.btnIngresar.Size = new System.Drawing.Size(120, 35);
-            this.btnIngresar.Click += new EventHandler(this.btnIngresar_Click);
-
-            // Agregar controles
-            this.Controls.Add(this.lblUsuario);
-            this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.lblContrasena);
-            this.Controls.Add(this.txtContrasena);
-            this.Controls.Add(this.btnIngresar);
+            // 
+            btnIngresar.Location = new Point(110, 165);
+            btnIngresar.Name = "btnIngresar";
+            btnIngresar.Size = new Size(120, 35);
+            btnIngresar.TabIndex = 4;
+            btnIngresar.Text = "Ingresar";
+            btnIngresar.Click += btnIngresar_Click;
+            // 
+            // lblUsuario
+            // 
+            lblUsuario.Location = new Point(50, 40);
+            lblUsuario.Name = "lblUsuario";
+            lblUsuario.Size = new Size(100, 20);
+            lblUsuario.TabIndex = 0;
+            lblUsuario.Text = "Usuario:";
+            // 
+            // lblContrasena
+            // 
+            lblContrasena.Location = new Point(50, 100);
+            lblContrasena.Name = "lblContrasena";
+            lblContrasena.Size = new Size(100, 20);
+            lblContrasena.TabIndex = 2;
+            lblContrasena.Text = "Contraseña:";
+            // 
+            // FormLogin
+            // 
+            ClientSize = new Size(324, 221);
+            Controls.Add(lblUsuario);
+            Controls.Add(txtUsuario);
+            Controls.Add(lblContrasena);
+            Controls.Add(txtContrasena);
+            Controls.Add(btnIngresar);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
+            Name = "FormLogin";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Login - Lavadero";
+            Load += FormLogin_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         private TextBox txtUsuario;
@@ -87,6 +105,16 @@ namespace Lavadero.Vistas
             {
                 MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtContrasena_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

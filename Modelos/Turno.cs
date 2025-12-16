@@ -7,10 +7,10 @@ namespace Lavadero.Modelos
         public int IdTurno { get; set; }
         public DateTime Fecha { get; set; }
         public TimeSpan Hora { get; set; }
-        public string Patente { get; set; }
-        public string TipoLavado { get; set; }
-        public string Descripcion { get; set; }
+        public string Patente { get; set; } = string.Empty;
+        public string TipoLavado { get; set; } = string.Empty;
+        public string Descripcion { get; set; } = string.Empty;
         public decimal Monto { get; set; }
-        public string InfoAuto { get; set; } // Para mostrar
+        public string InfoAuto { get; set; } = string.Empty; // Para mostrar
     }
 }

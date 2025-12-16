@@ -8,7 +8,7 @@ namespace Lavadero.Controladores
 {
     public class DuenoController
     {
-        private Conexion conexion = new Conexion();
+        private Conexion conexion = Conexion.Instancia;
 
         public List<Dueno> ObtenerTodos()
         {

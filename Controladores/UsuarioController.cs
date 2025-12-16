@@ -6,7 +6,7 @@ namespace Lavadero.Controladores
 {
     public class UsuarioController
     {
-        private Conexion conexion = new Conexion();
+        private Conexion conexion = Conexion.Instancia;
 
         public bool ValidarLogin(string nombreUsuario, string contrasena)
         {

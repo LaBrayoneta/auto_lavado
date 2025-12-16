@@ -6,7 +6,7 @@ namespace Lavadero.Controladores
 {
     public class TurnoController
     {
-        private Conexion conexion = new Conexion();
+        private Conexion conexion = Conexion.Instancia;
 
         public List<Turno> ObtenerTodos()
         {

@@ -6,9 +6,9 @@ namespace Lavadero.Modelos
     public class Usuario
     {
         public int IdUsuario { get; set; }
-        public string NombreUsuario { get; set; }
-        public string Contrasena { get; set; }
-        public string Nombre { get; set; }
+        public required string NombreUsuario { get; set; }
+        public required string Contrasena { get; set; }
+        public required string Nombre { get; set; }
 
         public static string EncriptarSHA256(string texto)
         {

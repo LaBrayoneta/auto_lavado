@@ -14,3 +14,4 @@ namespace Lavadero
             Application.Run(new FormLogin());
         }
     }
+}

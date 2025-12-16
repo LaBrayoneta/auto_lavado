@@ -3,12 +3,12 @@
     public class Dueno
     {
         public int IdDueno { get; set; }
-        public string Dni { get; set; }
-        public string Apellido { get; set; }
-        public string Nombres { get; set; }
-        public string Domicilio { get; set; }
-        public string CodigoPostal { get; set; }
-        public string Telefono { get; set; }
-        public string NombreLocalidad { get; set; } // Para mostrar
+        public required string Dni { get; set; }
+        public required string Apellido { get; set; }
+        public required string Nombres { get; set; }
+        public required string Domicilio { get; set; }
+        public required string CodigoPostal { get; set; }
+        public required string Telefono { get; set; }
+        public required string NombreLocalidad { get; set; } // Para mostrar
     }
 }
